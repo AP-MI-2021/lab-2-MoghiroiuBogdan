@@ -54,14 +54,14 @@ def main():
 
 optiune=input("dati optiune:")
 
-if optiune == "1":
+if optiune == '1':
         numar1=int(input("dati nr:"))
         print(is_palindrome(numar1))
-elif optiune == "2":
+elif optiune == '2':
         numar2=int(input("dati nr:"))
         print(is_superprime(numar2))
 
-elif optiune == "3":
+elif optiune == '3':
         break
 
 else:
