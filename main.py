@@ -47,24 +47,26 @@ def test_is_superprime():
     assert is_superprime(237) is False
 
 def main():
+    test_is_palindrome()
+    test_is_superprime()
     while True:
         print("1.verifica daca un nr dat este palindrom")
         print("2.determina daca un nr este superprim")
         print("3.iesire")
 
-optiune=input("dati optiune:")
+        optiune=input("dati optiune:")
 
-if optiune == '1':
-        numar1=int(input("dati nr:"))
-        print(is_palindrome(numar1))
-elif optiune == '2':
-        numar2=int(input("dati nr:"))
-        print(is_superprime(numar2))
+        if optiune == "1":
+            numar1=int(input("dati nr:"))
+            print(is_palindrome(numar1))
+        elif optiune == "2":
+         numar2=int(input("dati nr:"))
+            print(is_superprime(numar2))
 
-elif optiune == '3':
-        break
+         elif optiune == '3':
+            break
 
-else:
-    print("optiune gresita")
+        else:
+            print("optiune gresita")
 
 main()
