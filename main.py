@@ -36,7 +36,25 @@ def is_superprime(n):
         p=p//10
 
     return True
+def is_Prime (x):
+    if x<2:
+        return False
 
+    for i in range (2,x//2+1):
+        if x%i == 0:
+            return False
+    return True
+
+def get_largest_prime_below(n):
+    for i in range (n):
+        if is_Prime(i):
+            ultimul=i
+
+    return ultimul
+
+def test_get_largest_prime_below():
+    assert get_largest_prime_below(19) == 17
+    assert get_largest_prime_below(25) == 23
 
 def test_is_palindrome():
     assert is_palindrome(1221) is True
@@ -52,7 +70,8 @@ def main():
     while True:
         print("1.verifica daca un nr dat este palindrom")
         print("2.determina daca un nr este superprim")
-        print("3.iesire")
+        print("3.determina ulimul nr prim mai mic decat un nr citit")
+        print("4.iesire")
         optiune=input("dati optiune:")
 
         if optiune == "1":
@@ -62,7 +81,11 @@ def main():
             numar2=int(input("dati nr:"))
             print(is_superprime(numar2))
 
-        elif optiune == '3':
+        elif optiune == "3":
+            numar3=int(input("dati nr:"))
+            print(get_largest_prime_below(numar3))
+
+        elif optiune == "4":
             break
 
         else:
