@@ -7,7 +7,7 @@ def is_palindrome(n):
     '''
     ogl=0
     cop=n
-    while n!=0:
+    while cop!=0:
         ogl=ogl*10+cop%10
         cop=cop//10
     if ogl == n:
@@ -53,7 +53,6 @@ def main():
         print("1.verifica daca un nr dat este palindrom")
         print("2.determina daca un nr este superprim")
         print("3.iesire")
-
         optiune=input("dati optiune:")
 
         if optiune == "1":
