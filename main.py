@@ -63,7 +63,7 @@ def main():
             numar2=int(input("dati nr:"))
             print(is_superprime(numar2))
 
-         elif optiune == '3':
+        elif optiune == '3':
             break
 
         else:
